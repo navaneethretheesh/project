@@ -1,0 +1,19 @@
+version : "3.8"
+services:
+  httpd:
+    image: navaneeth2003/project1
+    container_name: container3
+    ports:
+    - "80:80"
+    volumes:
+    - vlm:/usr/local/apache2/htdocs/
+    networks:
+    - net1
+    restart: always
+
+volumes:
+  vlm:
+networks:
+  net1:
+    driver: bridge
+

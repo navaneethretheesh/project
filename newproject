@@ -1,0 +1,5 @@
+FROM httpd:latest
+COPY ./index.html /var/www/html
+COPY ./2127_little_fashion /usr/local/apache2/htdocs/
+EXPOSE 80
+CMD ["httpd","-D","FOREGROUND"]
